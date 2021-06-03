@@ -40,7 +40,7 @@ a {
 }
 button {
   padding: 2rem 6rem;
-  background-color: #131c27;
+  background-color: rgb(19, 28, 39);
   border: 0.1rem white solid;
   color: white;
   font-size: 1.8rem;
@@ -54,7 +54,7 @@ button:hover {
 /* Nav Section with HERO  */
 
 .main-head {
-  background-color: #131c27;
+  background-color: rgb(19, 28, 39);
   color: white;
 }
 nav {
@@ -148,7 +148,7 @@ nav ul {
 /* Benefits Section - Cards */
 
 .benefits-head {
-  background: #343c44;
+  background: rgb(19, 28, 39);
   padding: 3rem;
   min-height: 30vh;
   display: flex;
@@ -190,7 +190,7 @@ nav ul {
   padding: 0rem 1rem;
 }
 .card-icon {
-  background-color: #343c44;
+  background-color: rgb(19, 28, 39);
 }
 /* CONTACT SECTION */
 .contact {
@@ -205,7 +205,7 @@ nav ul {
   justify-content: center;
 }
 .form-wrapper {
-  background: rgba(19, 28, 39, 0.8);
+  background: rgba(19, 28, 39, 0.7);
   width: 60%;
   color: white;
   border-radius: 2rem;
@@ -231,7 +231,31 @@ nav ul {
   border: none;
   font-size: 3rem;
 }
+/* FOOTER */
 
+footer {
+  color: white;
+  background: rgba(19, 28, 39, 1);
+}
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+footer h5 {
+  flex: 1 1 40rem;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
 /* MEDIA QUERY */
 @media screen and (max-width: 933px) {
   html {
@@ -259,5 +283,14 @@ nav ul {
     text-align: center;
     margin-bottom: 20rem;
     padding: 2rem 2rem;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h5 {
+    padding-bottom: 3rem;
   }
 }
