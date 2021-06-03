@@ -40,11 +40,15 @@ a {
 }
 button {
   padding: 2rem 6rem;
-  background-color: #4c6e97;
+  background-color: #131c27;
   border: 0.1rem white solid;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+button:hover {
+  background: #456791;
 }
 
 /* Nav Section with HERO  */
@@ -92,7 +96,56 @@ nav ul {
 .hero h3 {
   padding: 5rem;
 }
+/* LOCATIONS SECTION */
 
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+}
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27, #663b34);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* makes the text transparent so that the background gradient shows through - the background-clip command clips the backround so that it is only active where there is text but without this transparency we wouldn't see it behind the black text.  You can do this with images too. */
+}
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none; /* this stops the user from accidentally grabbing the image and allows them to highlight the text that is "behind" it */
+}
+.moving-cloud-1 {
+}
+.moving-cloud-2 {
+  top: 5%;
+  z-index: -1;
+  opacity: 0.35;
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+@keyframes cloudAnimation {
+  0% {
+    transform: translate(10%, -10%);
+  }
+  100% {
+    transform: translate(10%, 0%);
+  }
+}
+
+/* MEDIA QUERY */
 @media screen and (max-width: 933px) {
   html {
     font-size: 45%;
@@ -104,5 +157,20 @@ nav ul {
     padding: 1rem;
     text-align: center;
     justify-content: center;
+  }
+  .cloud {
+    max-width: 80%;
+  }
+  .locations-head h2 {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  .locations-head h3 {
+    background: rgba(19, 28, 39, 0.5);
+    -webkit-text-fill-color: white;
+    text-align: center;
+    margin-bottom: 20rem;
+    padding: 2rem 2rem;
   }
 }
